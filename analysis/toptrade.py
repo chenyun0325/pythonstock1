@@ -33,6 +33,6 @@ def stock_basics():
     df = ts.get_stock_basics()
     return df    
 
-def save_db(data =None,table_name=None,con=None ,flag ='append'):
-    res = data.to_sql(table_name,con,if_exists=flag)
+def save_db(data =None,table_name=None,con=None ,flag ='append',dtype =None):
+    res = data.to_sql(table_name, con, if_exists=flag, dtype = dtype)
     return res        
